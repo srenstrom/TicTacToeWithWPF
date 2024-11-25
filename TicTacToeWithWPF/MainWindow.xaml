@@ -1,0 +1,71 @@
+﻿<Window x:Class="TicTacToeWithWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TicTacToeWithWPF"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="800" Width="800">
+    <Window.Resources>
+        <ImageBrush x:Key="ButtonImage" ImageSource="\Images\Skärmbild 2024-11-20 143132.png" />
+        <ControlTemplate x:Key="ButtonColor" TargetType="Button">
+            <Grid x:Name="DefaultButtonBackground" Background="{StaticResource ButtonImage}"/>
+            <ControlTemplate.Triggers>
+                <Trigger Property="Content" Value="X">
+                    <Setter TargetName="DefaultButtonBackground" Property="Background" Value="#C81C1C" />
+                </Trigger>
+                <Trigger Property="Content" Value="O">
+                    <Setter TargetName="DefaultButtonBackground" Property="Background" Value="#9DD3D5" />
+                </Trigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
+    </Window.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Button Template="{StaticResource ButtonColor}" x:Name="btnA1" Grid.Column="1" Grid.Row="1" IsTabStop="False" Focusable="False" FontSize="36" Click="Button_Click" Margin="2"></Button>
+        <Button Template="{StaticResource ButtonColor}" x:Name="btnA2" Grid.Column="1" Grid.Row="2" IsTabStop="False" Focusable="False" FontSize="36" Click="Button_Click" Margin="2"></Button>
+        <Button Template="{StaticResource ButtonColor}" x:Name="btnA3" Grid.Column="1" Grid.Row="3" IsTabStop="False" Focusable="False" FontSize="36" Click="Button_Click" Margin="2"></Button>
+        <Button Template="{StaticResource ButtonColor}" x:Name="btnB1" Grid.Column="2" Grid.Row="1" IsTabStop="False" Focusable="False" FontSize="36" Click="Button_Click" Margin="2"></Button>
+        <Button Template="{StaticResource ButtonColor}" x:Name="btnB2" Grid.Column="2" Grid.Row="2" IsTabStop="False" Focusable="False" FontSize="36" Click="Button_Click" Margin="2"></Button>
+        <Button Template="{StaticResource ButtonColor}" x:Name="btnB3" Grid.Column="2" Grid.Row="3" IsTabStop="False" Focusable="False" FontSize="36" Click="Button_Click" Margin="2"></Button>
+        <Button Template="{StaticResource ButtonColor}" x:Name="btnC1" Grid.Column="3" Grid.Row="1" IsTabStop="False" Focusable="False" FontSize="36" Click="Button_Click" Margin="2"></Button>
+        <Button Template="{StaticResource ButtonColor}" x:Name="btnC2" Grid.Column="3" Grid.Row="2" IsTabStop="False" Focusable="False" FontSize="36" Click="Button_Click" Margin="2"></Button>
+        <Button Template="{StaticResource ButtonColor}" x:Name="btnC3" Grid.Column="3" Grid.Row="3" IsTabStop="False" Focusable="False" FontSize="36" Click="Button_Click" Margin="2"></Button>
+
+        <Viewbox>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Label x:Name="XWins" FontWeight="Bold" Content="Dina vinster: 0" Margin="2" FontSize="15" Foreground="#9DD3D5" Background="#C81C1C"/>
+                <Label x:Name="OWins" Grid.Row="2" FontWeight="Bold" Content="Datorns vinster: 0" Margin="2" FontSize="15" Foreground="#C81C1C" Background="#9DD3D5"/>
+            </Grid>
+        </Viewbox>
+        <Viewbox Grid.Column="2">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Label x:Name="CurrentWinner" FontWeight="Bold" HorizontalAlignment="Center" Foreground="#C81C1C" FontSize="15" Visibility="Hidden"/>
+                <Button Margin="4" Padding="5" x:Name="Reset" Grid.Row="2" IsTabStop="False" Focusable="False" FontSize="15" FontWeight="Bold" Click="ResetButtons_Click"  Foreground="#C81C1C" Background="white" Visibility="Hidden">Starta om</Button>
+            </Grid>
+
+        </Viewbox>
+
+    </Grid>
+</Window>
