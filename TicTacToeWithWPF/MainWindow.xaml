@@ -44,13 +44,13 @@
         <Button Template="{StaticResource ButtonColor}" x:Name="btnC1" Grid.Column="3" Grid.Row="1" IsTabStop="False" Focusable="False" FontSize="36" Click="Button_Click" Margin="2"></Button>
         <Button Template="{StaticResource ButtonColor}" x:Name="btnC2" Grid.Column="3" Grid.Row="2" IsTabStop="False" Focusable="False" FontSize="36" Click="Button_Click" Margin="2"></Button>
         <Button Template="{StaticResource ButtonColor}" x:Name="btnC3" Grid.Column="3" Grid.Row="3" IsTabStop="False" Focusable="False" FontSize="36" Click="Button_Click" Margin="2"></Button>
-
+        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Row="4" Grid.Column="2" FontWeight="Bold" Margin="2" FontSize="28" Foreground="#C81C1C">Tic Tac Toe</TextBlock>
         <Viewbox>
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
-                </Grid.RowDefinitions>
+                </Grid.RowDefinitions>                
                 <Label x:Name="XWins" FontWeight="Bold" Content="Dina vinster: 0" Margin="2" FontSize="15" Foreground="#9DD3D5" Background="#C81C1C"/>
                 <Label x:Name="OWins" Grid.Row="2" FontWeight="Bold" Content="Datorns vinster: 0" Margin="2" FontSize="15" Foreground="#C81C1C" Background="#9DD3D5"/>
             </Grid>
