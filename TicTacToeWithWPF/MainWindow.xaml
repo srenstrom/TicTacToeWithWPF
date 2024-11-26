@@ -35,15 +35,15 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <Button Template="{StaticResource ButtonColor}" x:Name="btnA1" Grid.Column="1" Grid.Row="1" IsTabStop="False" Focusable="False" FontSize="36" Click="Button_Click" Margin="2"></Button>
-        <Button Template="{StaticResource ButtonColor}" x:Name="btnA2" Grid.Column="1" Grid.Row="2" IsTabStop="False" Focusable="False" FontSize="36" Click="Button_Click" Margin="2"></Button>
-        <Button Template="{StaticResource ButtonColor}" x:Name="btnA3" Grid.Column="1" Grid.Row="3" IsTabStop="False" Focusable="False" FontSize="36" Click="Button_Click" Margin="2"></Button>
-        <Button Template="{StaticResource ButtonColor}" x:Name="btnB1" Grid.Column="2" Grid.Row="1" IsTabStop="False" Focusable="False" FontSize="36" Click="Button_Click" Margin="2"></Button>
-        <Button Template="{StaticResource ButtonColor}" x:Name="btnB2" Grid.Column="2" Grid.Row="2" IsTabStop="False" Focusable="False" FontSize="36" Click="Button_Click" Margin="2"></Button>
-        <Button Template="{StaticResource ButtonColor}" x:Name="btnB3" Grid.Column="2" Grid.Row="3" IsTabStop="False" Focusable="False" FontSize="36" Click="Button_Click" Margin="2"></Button>
-        <Button Template="{StaticResource ButtonColor}" x:Name="btnC1" Grid.Column="3" Grid.Row="1" IsTabStop="False" Focusable="False" FontSize="36" Click="Button_Click" Margin="2"></Button>
-        <Button Template="{StaticResource ButtonColor}" x:Name="btnC2" Grid.Column="3" Grid.Row="2" IsTabStop="False" Focusable="False" FontSize="36" Click="Button_Click" Margin="2"></Button>
-        <Button Template="{StaticResource ButtonColor}" x:Name="btnC3" Grid.Column="3" Grid.Row="3" IsTabStop="False" Focusable="False" FontSize="36" Click="Button_Click" Margin="2"></Button>
+        <Button Template="{StaticResource ButtonColor}" x:Name="btnA1" Grid.Column="1" Grid.Row="1" FontSize="36" Click="Button_Click" Margin="2"></Button>
+        <Button Template="{StaticResource ButtonColor}" x:Name="btnA2" Grid.Column="1" Grid.Row="2" FontSize="36" Click="Button_Click" Margin="2"></Button>
+        <Button Template="{StaticResource ButtonColor}" x:Name="btnA3" Grid.Column="1" Grid.Row="3" FontSize="36" Click="Button_Click" Margin="2"></Button>
+        <Button Template="{StaticResource ButtonColor}" x:Name="btnB1" Grid.Column="2" Grid.Row="1" FontSize="36" Click="Button_Click" Margin="2"></Button>
+        <Button Template="{StaticResource ButtonColor}" x:Name="btnB2" Grid.Column="2" Grid.Row="2" FontSize="36" Click="Button_Click" Margin="2"></Button>
+        <Button Template="{StaticResource ButtonColor}" x:Name="btnB3" Grid.Column="2" Grid.Row="3" FontSize="36" Click="Button_Click" Margin="2"></Button>
+        <Button Template="{StaticResource ButtonColor}" x:Name="btnC1" Grid.Column="3" Grid.Row="1" FontSize="36" Click="Button_Click" Margin="2"></Button>
+        <Button Template="{StaticResource ButtonColor}" x:Name="btnC2" Grid.Column="3" Grid.Row="2" FontSize="36" Click="Button_Click" Margin="2"></Button>
+        <Button Template="{StaticResource ButtonColor}" x:Name="btnC3" Grid.Column="3" Grid.Row="3" FontSize="36" Click="Button_Click" Margin="2"></Button>
         <TextBlock HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Row="4" Grid.Column="2" FontWeight="Bold" Margin="2" FontSize="28" Foreground="#C81C1C">Tic Tac Toe</TextBlock>
         <Viewbox>
             <Grid>
@@ -62,7 +62,7 @@
                     <RowDefinition/>
                 </Grid.RowDefinitions>
                 <Label x:Name="CurrentWinner" FontWeight="Bold" HorizontalAlignment="Center" Foreground="#C81C1C" FontSize="15" Visibility="Hidden"/>
-                <Button Margin="4" Padding="5" x:Name="Reset" Grid.Row="2" IsTabStop="False" Focusable="False" FontSize="15" FontWeight="Bold" Click="ResetButtons_Click"  Foreground="#C81C1C" Background="white" Visibility="Hidden">Starta om</Button>
+                <Button Margin="4" Padding="5" x:Name="Reset" Grid.Row="2" FontSize="15" FontWeight="Bold" Click="ResetButtons_Click"  Foreground="#C81C1C" Background="white" Visibility="Hidden">Starta om</Button>
             </Grid>
 
         </Viewbox>
