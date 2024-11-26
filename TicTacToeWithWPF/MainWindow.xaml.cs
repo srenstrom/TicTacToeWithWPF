@@ -29,12 +29,12 @@ namespace TicTacToeWithWPF
         private void Button_Click(object sender, RoutedEventArgs e)
         {
 
-            Button button = (Button)sender;
+            Button btn = (Button)sender;
             if (IsGameOver())
             {
                 return;
             }
-            PlayerMove(button);
+            PlayerMove(btn);
             if (IsGameOver())
             {
                 return;
